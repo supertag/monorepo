@@ -1,0 +1,26 @@
+{
+	"arrowParens": "always",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"endOfLine": "auto",
+	"htmlWhitespaceSensitivity": "css",
+	"jsxSingleQuote": false,
+	"printWidth": 80,
+	"proseWrap": "preserve",
+	"quoteProps": "preserve",
+	"semi": true,
+	"singleQuote": true,
+	"trailingComma": "es5",
+
+	"tabWidth": 4,
+	"useTabs": true,
+	"overrides": [
+		{ "files": "*.md", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.json", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.jsonc", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.css", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.less", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.scss", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.yaml", "options": { "tabWidth": 2, "useTabs": false } }
+	]
+}
