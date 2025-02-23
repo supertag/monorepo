@@ -25,12 +25,8 @@ dist-ssr
 
 # 일반
 .cache
-.eslintcache
-.stylelintcache
 .DS_Store
 .idea
-.next
-.temp
 .tmp
 .turbo
 .vercel

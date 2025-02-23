@@ -1,4 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Dependencies
 node_modules
@@ -23,16 +22,19 @@ build
 dist
 dist-ssr
 
-# 일반
+# 일반적인 목록
 .cache
-.eslintcache
-.stylelintcache
 .DS_Store
+# .vscode
 .idea
-.next
-.temp
 .tmp
 .turbo
 .vercel
 *.log
 *.pem
+*.tsbuildinfo
+
+# 추가
+# package.json
+package-lock.json
+pnpm-lock.yaml
