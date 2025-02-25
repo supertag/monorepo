@@ -1,8 +1,12 @@
 {
   "editor.tabSize": 4,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
-  "editor.formatOnSave": true,
+
+  //-------------------
+  // Prittier 설정
+  //-------------------
+
+  // Prettier - Code formatter 확장 도구 설치 후 설정
+  // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode#prettier-settings
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   //-------------------
@@ -22,4 +26,7 @@
 
   // 보통 이렇게 디렉토리 설정을 안해서 자동고침이 안된다
   "eslint.workingDirectories": [{ "mode": "auto" }]
+
+  // 사용하지 않는 import문을 자동으로 삭제
+  // "source.removeUnusedImports": true,
 }
