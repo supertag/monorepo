@@ -1,25 +1,264 @@
 {
-  "editor.tabSize": 4,
-  "editor.formatOnPaste": true,
+  "hediet.vscode-drawio.resizeImages": null,
+  "workbench.editorAssociations": {
+    // "*.copilotmd": "vscode.markdown.preview.editor"
+  },
+  "markdown.validate.enabled": true,
+  "markdown.extension.syntaxHighlight.languages": [
+    "bash",
+    "sh",
+    "shell",
+    "cmd",
+    "bat",
+    "powershell"
+  ],
+
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+
+  // "html.format.extraLiners": "head, body, /html",
+  "format.preserveNewLines": true,
+  "html.format.preserveNewLines": true,
+  "html.format.maxPreserveNewLines": 3,
+  "css.format.maxPreserveNewLines": 3,
+  "less.format.maxPreserveNewLines": 3,
+  "scss.format.maxPreserveNewLines": 3,
+  "json.format.keepLines": true,
+
+  //-------------------
+  // 탐색기, 터미널, 편집기 등의 설정
+  //-------------------
+
+  // "editor.lineHeight": 22,
+  "explorer.compactFolders": false,
+  "workbench.tree.indent": 22,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.iconTheme": "material-icon-theme",
+  // 창 중복으로 열림 제어
+  "workbench.editor.revealIfOpen": true,
+
+  // 터미널 창 열릴때 기본값 (CMD)
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": null,
+    "Windows PowerShell": null
+  },
+
+  "editor.minimap.enabled": false,
+  // "redhat.telemetry.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  //-------------------
+  // 색상 코드, 칼라픽커, 공백 trim
+  //-------------------
+
+  // 라인 끝 공백 표시
+  "trailing-spaces.highlightCurrentLine": false,
+  "trailing-spaces.includeEmptyLines": false,
+  "trailing-spaces.deleteModifiedLinesOnly": true,
+  "trailing-spaces.showStatusBarMessage": false,
+  // "trailing-spaces.trimOnSave": true,
+  // "trailing-spaces.modified_lines_only": true,
+  "trailing-spaces.backgroundColor": "#fff20017",
+  "trailing-spaces.borderColor": "transparent",
+
+  // 색상 코드에 색상 표시
+  "colorize.languages": [
+    "typescript",
+    "javascript",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  // 칼라픽커 표시
+  "vscode-color-picker.languages": [
+    "typescript",
+    "javascript",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+
+  //-------------------
+  // 동작 Trigger
+  //-------------------
+
+  // "editor.formatOnSaveMode": "modifications",
   "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "formattingToggle.affects": ["editor.formatOnSave", "editor.formatOnPaste"],
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    // 사용되지 않은 import문 자동 삭제
+    // "source.removeUnusedImports": "always",
+    // import문 자동 정렬 및 자동 삭제
+    "source.organizeImports": "always"
+  },
+
+  //-------------------
+  // 기본 포맷
+  //-------------------
+
+  // "editor.fontSize": 16,
+  // "editor.fontFamily": "'D2Coding'",
+  // "editor.fontFamily": "'Fira Code', Monaco, 'Courier New', monospace",
+  // "editor.fontLigatures": true,
+
+  // https://code.visualstudio.com/docs/languages/javascript
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+  // "editor.insertSpaces": true,
+  // "editor.detectIndentation": true,
+
+  // "editor.trimAutoWhitespace": false, // 자동 공백 제거 방지
+  // "files.trimTrailingWhitespace": false, // 줄 끝 공백 자동 삭제 방지
+  // "files.trimFinalNewlines": false, // 여러 개의 빈 줄 유지
+  // "editor.renderWhitespace": "all",
+
+  // 코드 스타일 유지 관련
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+
+  //-------------------
+  // Prittier 설정
+  //-------------------
+
+  // Prettier - Code formatter 확장 도구 설치 후 설정
+  // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode#prettier-settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  /*
+	"prettier.arrowParens": "always",
+	"prettier.bracketSameLine": true,
+	"prettier.bracketSpacing": true,
+	"prettier.embeddedLanguageFormatting": "auto",
+	"prettier.endOfLine": "auto",
+	"prettier.htmlWhitespaceSensitivity": "css",
+	"prettier.jsxSingleQuote": false,
+	"prettier.objectWrap": "preserve",
+	"prettier.printWidth": 80,
+	"prettier.proseWrap": "preserve",
+	"prettier.quoteProps": "preserve",
+	// "prettier.requirePragma": false,
+	"prettier.semi": true,
+	"prettier.singleAttributePerLine": false,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "es5",
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"prettier.overrides": [
+		{ "files": "*.md", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.json", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.jsonc", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.css", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.less", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.scss", "options": { "tabWidth": 2, "useTabs": false } },
+		{ "files": "*.yaml", "options": { "tabWidth": 2, "useTabs": false } }
+	],
+ */
+
+  "[markdown]": {
+    "editor.tabSize": 2,
+    "trailing-spaces.trimOnSave": false
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2
+  },
+
+  /*
+  "prettier.enable": true,
+  "prettier.requireConfig": false,
+  // ignore 파일을 읽지 않으려면 null로 설정
+  "prettier.ignorePath": ".prettierignore",
+  "prettier.configPath": ".prettierrc",
+  // prettier module 경로
+  "prettier.prettierPath": "./node_modules/prettier",
+  "prettier.resolveGlobalModules": false,
+  // 오버라이드를 설정을 위한 파일 유형
+  // "overrides": [{ "files": "*.abc", "options": { "parser": "babel" } }],
+  "prettier.documentSelectors": [],
+  "prettier.useEditorConfig": true,
+  // node_modules 폴더 내의 파일을 처리할지 여부
+  "prettier.withNodeModules": false,
+  */
 
   //-------------------
   // Eslint 설정
   //-------------------
+  // Eslint 확장도구 설치함
 
-  // lint 검사 대상을 제한함 (css, html 등 제외)
+  // lint 검사 대상을 제한함 (css 등 제외)
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "html"
+    // "markdown"
   ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+
+  "[javascript]": {
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
+  },
+  "[javascriptreact]": {
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
+  },
+  "[typescriptreact]": {
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
+  },
+  "[html]": {
+    // https://github.com/microsoft/vscode-eslint
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
   },
 
   // 보통 이렇게 디렉토리 설정을 안해서 자동고침이 안된다
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  // "eslint.workingDirectories": ["./apps", "./packages"],
+
+  // vscode-eslint
+  // "eslint.codeActionsOnSave.mode": "all",
+  // "eslint.codeActionsOnSave.rules": [
+  //   // "@typescript-eslint/semi",
+  //   // "@typescript-eslint/indent",
+  //   // "!@typescript-eslint/*",
+  //   "*"
+  // ],
+
+  // 모든 자동 수정 규칙은 info로 재정의
+  "eslint.rules.customizations": [
+    { "rule": "*", "fixable": true, "severity": "info" }
+  ],
+
+  //-------------------
+  // Git 설정
+  //-------------------
+
+  "git.openRepositoryInParentFolders": "never",
+  "git.enableSmartCommit": true,
+  // git blame 끄기
+  "gitlens.currentLine.enabled": false
 }

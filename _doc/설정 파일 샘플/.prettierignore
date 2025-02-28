@@ -38,3 +38,10 @@ dist-ssr
 # package.json
 package-lock.json
 pnpm-lock.yaml
+
+# 제외하지 않고 기본 포맷터로 계속 사용함
+# *.ts
+# *.tsx
+# *.js
+# *.jsx
+# *.htm*
