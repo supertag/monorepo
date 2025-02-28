@@ -39,8 +39,9 @@ dist-ssr
 package-lock.json
 pnpm-lock.yaml
 
-# 스크립트 파일 제외
+# 제외하지 않고 기본 포맷터로 계속 사용함
 # *.ts
 # *.tsx
 # *.js
 # *.jsx
+# *.htm*

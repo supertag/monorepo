@@ -63,6 +63,12 @@ importers:
       '@eslint/js':
         specifier: ^9.21.0
         version: 9.21.0
+      '@html-eslint/eslint-plugin':
+        specifier: ^0.35.0
+        version: 0.35.0
+      '@html-eslint/parser':
+        specifier: ^0.35.0
+        version: 0.35.0
       '@stylistic/eslint-plugin':
         specifier: ^4.1.0
         version: 4.1.0(eslint@9.21.0)(typescript@5.7.3)
@@ -378,6 +384,22 @@ packages:
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@html-eslint/eslint-plugin@0.35.0':
+    resolution: {integrity: sha512-49IfQCePw2+WluyHDBderyyaMXiKTMBFA70BvTDndbK2k2bHOmbgI/Nw2vcp8UkQ0t3b3LFGluCXpQsqBtg1BQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@html-eslint/parser@0.35.0':
+    resolution: {integrity: sha512-8VSA1oRWR8qrTDyrM1syykFAhpKNbzSbsr7CfvYir9LhpZfD6TMcHqJSp+6jhzhSprWG24f2GsKqEUOOx9AopA==}
+    engines: {node: '>=8.10.0'}
+
+  '@html-eslint/template-parser@0.35.0':
+    resolution: {integrity: sha512-0ztgICyCyR1YOTvi/YJGMJHQja9A/9wGJcAyBC4Ty8fi5kgeLQ+mVxbjyMwYzbSEde49bKscNAO0lOUb4EIVHA==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@html-eslint/template-syntax-parser@0.35.0':
+    resolution: {integrity: sha512-anUBh/5LhQGpx+E79s2ENCMk20S8SOPTwp1WBMzRm0CvLaN42st68FNwT3BKRhjFVs2RrmRcTJNSlKWulFrvAA==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
     engines: {node: '>=18.18.0'}
@@ -691,6 +713,9 @@ packages:
 
   electron-to-chromium@1.5.103:
     resolution: {integrity: sha512-P6+XzIkfndgsrjROJWfSvVEgNHtPgbhVyTkwLjUM2HU/h7pZRORgaTlHqfAikqxKmdJMLW8fftrdGWbd/Ds0FA==}
+
+  es-html-parser@0.1.0:
+    resolution: {integrity: sha512-4YUmQ4kGKGQUb87jwr25XeGwuFIfjq7kZ+F5/V23ji+3gVXC9JEtUxngM0KbhgXl2L1jqbWZ138SI/UQ33XINw==}
 
   esbuild@0.24.2:
     resolution: {integrity: sha512-+9egpBW8I3CD5XPe0n6BfT5fxLzxrlDzqydF3aviG+9ni1lDC/OvMHcxqEFV0+LANZG5R1bFMWfUrjVsdwxJvA==}
@@ -1391,6 +1416,22 @@ snapshots:
       '@eslint/core': 0.12.0
       levn: 0.4.1
 
+  '@html-eslint/eslint-plugin@0.35.0':
+    dependencies:
+      '@html-eslint/template-parser': 0.35.0
+      '@html-eslint/template-syntax-parser': 0.35.0
+
+  '@html-eslint/parser@0.35.0':
+    dependencies:
+      '@html-eslint/template-syntax-parser': 0.35.0
+      es-html-parser: 0.1.0
+
+  '@html-eslint/template-parser@0.35.0':
+    dependencies:
+      es-html-parser: 0.1.0
+
+  '@html-eslint/template-syntax-parser@0.35.0': {}
+
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.6':
@@ -1698,6 +1739,8 @@ snapshots:
   deep-is@0.1.4: {}
 
   electron-to-chromium@1.5.103: {}
+
+  es-html-parser@0.1.0: {}
 
   esbuild@0.24.2:
     optionalDependencies:

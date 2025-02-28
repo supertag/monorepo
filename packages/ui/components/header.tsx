@@ -5,7 +5,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ title }) => (
-        <header id="header">
-            <h1>{title}</h1>
-        </header>
-    );
+	<header id="header">
+		<h1>{title}</h1>
+	</header>
+);
