@@ -20,7 +20,11 @@
   "useTabs": false,
   "overrides": [
     { "files": "*.*js", "options": { "tabWidth": 4, "useTabs": true } },
+    { "files": "*.*jsx", "options": { "tabWidth": 4, "useTabs": true } },
+    { "files": "*.*ts", "options": { "tabWidth": 4, "useTabs": true } },
+    { "files": "*.*tsx", "options": { "tabWidth": 4, "useTabs": true } },
     { "files": "*.htm*", "options": { "tabWidth": 4, "useTabs": true } },
+
     { "files": "*.md", "options": { "tabWidth": 2, "useTabs": false } },
     { "files": "*.json", "options": { "tabWidth": 2, "useTabs": false } },
     { "files": "*.jsonc", "options": { "tabWidth": 2, "useTabs": false } },

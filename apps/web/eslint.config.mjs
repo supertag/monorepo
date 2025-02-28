@@ -8,4 +8,4 @@ import config from '@repo/eslint-config';
 // Object.keys(config[2].languageOptions.parser);
 
 // console.log('ESLint Config:', JSON.stringify(config, null, 2));
-export default [...config];
+export default [ ...config ];

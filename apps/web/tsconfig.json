@@ -1,6 +1,6 @@
 {
   "extends": "@repo/typescript-config/vite.json",
-  "include": ["src", "../../packages/eslint-config/src/htmlRules.mjs"],
+  "include": ["src"],
   "compilerOptions": {
     "jsx": "react-jsx"
   }

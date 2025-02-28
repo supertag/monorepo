@@ -3,6 +3,7 @@
 // ------------------
 // https://eslint.org/docs/latest/rules/
 
+import { FILE_JS } from './constant.mjs';
 
 const eslintJsRules = {
 	// 화살표 함수 본문 주위에 중괄호 생략 허용
@@ -49,7 +50,7 @@ const eslintJsRules = {
 };
 
 export default {
-	// ...js.configs.recommended,
-	// files: [ '**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.mjs', '**/*.cjs' ],
+	// files 값이 같아야 최종 merge됨
+	files: FILE_JS,
 	rules: eslintJsRules
 };

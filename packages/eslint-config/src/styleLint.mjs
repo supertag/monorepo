@@ -4,6 +4,7 @@
 // https://eslint.style/packages/default
 
 import stylistic from '@stylistic/eslint-plugin';
+import { FILE_JS, LINT_PRESET } from './constant.mjs';
 
 const styleLintRules = {
 	// 'unix'(LF), 'windows'(CRLF) 줄 끝 문자를 사용
@@ -134,9 +135,9 @@ const styleLintRules = {
 	// -----------------
 
 	// '@stylistic/no-tabs': 'off',
-	'@stylistic/indent': [ 'warn', 'tab', { tabLength: 4, ignoredNodes: [ 'ImportDeclaration' ] }],
-	// '@stylistic/indent-binary-ops': [ 'warn', 'tab' ],
-	// '@stylistic/jsx-indent-props': [ 'warn', 'tab' ],
+	'@stylistic/indent': [ 'warn', LINT_PRESET.indent, { tabLength: 4, ignoredNodes: [ 'ImportDeclaration' ] }],
+	'@stylistic/indent-binary-ops': [ 'warn', LINT_PRESET.indent ],
+	'@stylistic/jsx-indent-props': [ 'warn', LINT_PRESET.indent ],
 
 	// -----------------
 	// JSX 줄바꿈
@@ -167,14 +168,17 @@ const styleLintRules = {
 	'@stylistic/no-extra-parens': 'off',
 	'@stylistic/no-extra-semi': 'warn',
 	'@stylistic/no-floating-decimal': 'warn',
-	'@stylistic/no-multiple-empty-lines': [ 'warn', { max: 4, maxEOF: 0, maxBOF: 0 }],
+	'@stylistic/no-multiple-empty-lines': [ 'warn', { max: LINT_PRESET.maxEmptyLine, maxEOF: 0, maxBOF: 0 }],
 };
 
 export default {
-	// files: [ '**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.mjs', '**/*.cjs' ],
-	// plugins: {
-	// 	'@stylistic': stylistic,
-	// },
+	// files 값이 같아야 최종 merge됨
+	files: FILE_JS,
+
+	plugins: {
+		'@stylistic': stylistic,
+	},
+
 	rules: {
 		// code style rules
 		// https://eslint.style/guide/config-presets
@@ -184,15 +188,8 @@ export default {
 			flat: true,
 			// pluginName: '@stylistic',
 			jsx: true,
-
-			arrowParens: true,
-			blockSpacing: true,
-			braceStyle: '1tbs',
-			commaDangle: 'only-multiline',
-			indent: 'tab',
-			semi: true,
-			quotes: 'single',
-			quoteProps: 'consistent-as-needed',
+			indent: LINT_PRESET.indent,
+			...LINT_PRESET.js
 		}).rules,
 
 		...styleLintRules

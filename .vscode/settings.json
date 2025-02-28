@@ -2,15 +2,12 @@
   //-------------------
   // Prittier 설정
   //-------------------
-
   // Prettier - Code formatter 확장 도구 설치 후 설정
   // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode#prettier-settings
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-
   //-------------------
   // Eslint 설정
   //-------------------
-
   // 보통 이렇게 디렉토리 설정을 안해서 자동고침이 안된다
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  // "eslint.workingDirectories": [{ "mode": "auto" }]
 }
