@@ -1,4 +1,4 @@
-# `Murborepo` Vite starter
+# `Monorepo` Vite starter
 
 Monorepo 구성 템플릿입니다.  
 새로운 프로젝트를 생성할때 boilerflate로 사용하세요.
@@ -6,7 +6,7 @@ Monorepo 구성 템플릿입니다.
 > 본 프로젝트는 Turborepo프로젝트 (
 > [`create-turbo`](https://github.com/vercel/turborepo/tree/main/examples/with-vite-react)
 > ) 저장소를 fork 함  
-> npx create-turbo@latest -e with-vite-react
+> `npx create-turbo@latest -e with-vite-react`
 
 > 프로젝트 구성 및 설정에 대한 내용은 [`_doc`](./_doc) 폴더 내용을 참고하세요
 
