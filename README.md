@@ -42,9 +42,17 @@ pnpm run lint
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
+Eslint의 Rules는 다음을 참고하세요.
+
+- [ESLint rules](https://eslint.org/docs/latest/rules/)
+- [ESLint Stylistic default](https://eslint.style/packages/default)
+- [typescript-eslint rules](https://typescript-eslint.io/rules/)
+
 ## Vscode 확장 도구 (선택 사항)
 
 vscode 확장 도구 설치 및 설정이 필요합니다.
+
+> 설정 파일 내용은 [`_doc/설정 파일 샘플`](./_doc/설정%20파일%20샘플/) 폴더 내용을 참고하세요
 
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)

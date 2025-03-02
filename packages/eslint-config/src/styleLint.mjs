@@ -87,6 +87,9 @@ const styleLintRules = {
 	// (customize)
 	// '@stylistic/dot-location': [ 'warn', 'property' ],
 
+	// 긴줄 길이 체한 (fix 안됨)
+	// '@stylistic/max-len': [ 'warn', { code: 80, tabWidth: 4, ignoreUrls: true }],
+
 	// -----------------
 	// 간격
 	// -----------------
